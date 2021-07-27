@@ -1,0 +1,17 @@
+	AREA  ASCENDING , CODE, READONLY
+
+ENTRY				;Mark first instruction to execute
+START
+	
+			LDR R2,=CVALUE	; ADDRESS OF CODE REGION
+			LDMIB R2!,{R3-R6}
+BACK B BACK
+			
+
+CVALUE 
+		DCD	 0X44444444	;
+		DCD	0X11111111	;
+		DCD	0X33333333	;
+		DCD	0X22222222	;		
+							
+	END				
