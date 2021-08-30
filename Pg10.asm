@@ -1,0 +1,10 @@
+	AREA TEST, CODE, READONLY
+ENTRY
+
+START
+	MOV R0,#6
+	MOV R1,#5
+	TST R0,R1         ; 6 & 5 = 4 z
+BACK B BACK
+	END
+
